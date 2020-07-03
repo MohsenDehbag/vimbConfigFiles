@@ -1,0 +1,82 @@
+# Home
+set home-page=http://github.com
+
+# Downloads
+set download-path=~/Downloads
+
+# UI
+set hintkeys=asdfglkjh
+set stylesheet=on
+set smooth-scrolling=on
+
+# Status bar
+set statusbar=false
+set status-color-bg=#002b36
+set status-color-fg=#657b83
+set status-font=terminus\ 15
+set status-ssl-color-bg=#002b36
+set status-ssl-color-fg=#657b83
+set status-ssl-font=terminus\ 15
+set status-sslinvalid-color-bg=#002b36
+set status-sslinvalid-color-fg=#657b83
+set status-sslinvalid-font=terminus\ 15
+
+# Input bar
+set input-bg-normal=#002b36
+set input-fg-normal=#657b83
+set input-font-normal=terminus\ 15
+set input-bg-error=#002b36
+set input-fg-error=#5f676a
+set input-font-error=terminus\ 15
+
+# Completion
+set completion-bg-normal=#002b36
+set completion-fg-normal=#657b83
+set completion-bg-active=#002b36
+set completion-fg-active=#5f676a
+set completion-font=terminus\ 15
+
+# Webkit
+set accelerated-compositing=on
+set defaultencoding=utf-8
+set html5-database=on
+set html5-local-storage=on
+set images=on
+set webgl=on
+
+# SSL
+set strict-ssl=false
+
+# JS
+set javascript-can-access-clipboard=off
+set javascript-can-open-windows-automatically=off
+
+# Editing
+set editor-command=gvim -f %s
+
+# Zoom in everything by default
+aug zoom_all
+  au LoadCommited * normal zz|8zI
+aug end
+
+# Try to speed things up
+set proxy=off
+
+# Switching Tabs
+nnoremap gt :sh! vimb-switch-tab.sh $VIMB_XID<CR><Esc>
+
+# History Navigation:
+:nnoremap H <C-o>
+:nnoremap L <C-i>
+
+# Shortcuts:
+shortcut-add az=https://smile.amazon.com/s?k=$0&ref=nb_sb_noss
+shortcut-add dl=https://duckduckgo.com/lite/?q=$0
+shortcut-add go=https://www.google.com/search?q=$0
+shortcut-add ha=https://hackage.haskell.org/packages/search?terms=$0
+shortcut-add ho=https://hoogle.haskell.org/?hoogle=$0&scope=set%3Astackage
+shortcut-add no=https://nixos.org/nixos/options.html#$0
+shortcut-add np=https://nixos.org/nixos/packages.html?query=$0
+shortcut-add wd=https://en.wiktionary.org/w/index.php?search=$0
+shortcut-add wp=https://en.wikipedia.org/w/index.php?search=$0
+shortcut-default dl
